@@ -47,13 +47,15 @@ Description: Writes short summaries from given facts.
 Switch to `researcher-agent`:
 
 ```text
-Find three official sources about Hermes. Return the links and one point for each source.
+Find three official sources about Hermes.
+Return the links and one point for each source.
 ```
 
 Switch to `writer-agent`:
 
 ```text
-Write a short summary from these facts. Use simple English.
+Write a short summary from these facts.
+Use simple English.
 ```
 
 ### Create a profile with a prompt
@@ -63,7 +65,8 @@ You can also ask Hermes to create a profile for you.
 Try this prompt:
 
 ```text
-Please create a profile that is an expert in date and time. When I ask about the date or time, please provide the time in both Singapore and the US.
+Please create a profile that is an expert in date and time.
+When I ask about the date or time, please provide the time in both Singapore and the US.
 ```
 
 Review the profile name and settings before you use it.

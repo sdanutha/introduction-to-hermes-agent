@@ -22,17 +22,12 @@ Kanban uses a task board. The gateway dispatcher starts assigned work.
 
 ## Try it
 
-### Start the board
-
-```powershell
-hermes kanban init
-hermes gateway start
-```
-
 ### Create a task
 
 ```powershell
 hermes kanban create "Research Hermes Desktop" --assignee researcher-agent
+hermes kanban create "Write a short Hermes summary" --assignee writer-agent
+hermes kanban create "Review the Hermes summary" --assignee researcher-agent
 ```
 
 ### Watch the work
@@ -44,16 +39,6 @@ hermes kanban show <task_id>
 ```
 
 You can also use Dashboard to check profiles, sessions, and system status.
-
-## Check the result
-
-### Review
-
-```powershell
-hermes kanban block <task_id> "Need more information."
-hermes kanban unblock <task_id>
-hermes kanban archive <task_id>
-```
 
 ## Safety
 

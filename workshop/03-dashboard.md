@@ -20,11 +20,6 @@ Run `hermes dashboard` and open the Dashboard.
 | 2 | Open Sessions | The Desktop chat is visible. |
 | 3 | Check the session details | The model and messages are clear. |
 
-```text
-Open the latest session.
-Give me a short summary of the work.
-```
-
 ## Check the result
 
 - The session shows the correct model and messages.

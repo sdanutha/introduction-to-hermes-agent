@@ -92,7 +92,7 @@ Tell me what you can do.
 | `hermes --help` | See all commands. |
 | `hermes` | Start a chat. |
 | `hermes --tui` | Launch the modern TUI. |
-| `hermes --cli` | Force the classic REPL. |
+| `hermes --cli` | Launch the classic REPL. |
 | `hermes setup` | Run setup wizard. |
 | `hermes model` | Select default model. |
 | `hermes sessions list` | List past sessions. |

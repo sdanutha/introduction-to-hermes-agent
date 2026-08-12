@@ -10,16 +10,17 @@ Use Desktop to read a project and create a result.
 
 ## Setup
 
-Open a project in Desktop.
+Run `hermes desktop` and open Desktop.
 
 ## Try it
 
 | Step | Do this | Good result |
 | --- | --- | --- |
-| 1 | Open a project in Desktop | The project appears. |
-| 2 | Ask Hermes to explain the project | The answer has clear points. |
-| 3 | Ask for a short report | Hermes creates a useful result. |
-| 4 | Open File Browser or Artifacts | The result is easy to find. |
+| 1 | Run `hermes desktop` | Desktop opens. |
+| 2 | Open a project in Desktop | The project appears. |
+| 3 | Ask Hermes to explain the project | The answer has clear points. |
+| 4 | Ask for a short report | Hermes creates a useful result. |
+| 5 | Open File Browser or Artifacts | The result is easy to find. |
 
 ### Short prompt
 

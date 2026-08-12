@@ -10,14 +10,6 @@ Create a task that runs automatically.
 
 Cron can run a task once or on a schedule.
 
-## Setup
-
-Cron jobs need a running gateway.
-
-```powershell
-hermes gateway start
-```
-
 ## Try it
 
 ### Create a task with a prompt

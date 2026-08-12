@@ -1,6 +1,6 @@
 # Hermes Agent Workshop
 
-This workshop teaches Hermes Agent with Desktop and Dashboard.
+This workshop teaches Hermes Agent with CLI/TUI Desktop and Dashboard.
 
 ## Start here
 
