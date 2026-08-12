@@ -1,92 +1,200 @@
-# Introduction-to-Hermes-Agent
+# Day 2 - Hermes Agent Practical Workflow
 
+Day 2 teaches Hermes Agent as a practical always-on agent workflow system.
 
+The lesson starts with simple CLI use, then moves through tools, memory, skills, cron jobs, and safety decisions. The goal is not to cover every Hermes feature. The goal is to help learners build a small, repeatable workflow that they can trust, inspect, and improve.
 
-## Getting started
+## Learning Goal
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+By the end of Day 2, learners should understand:
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+1. How to verify a working Hermes installation before adding advanced features.
+2. How to use Hermes through the CLI or TUI for inspectable tasks.
+3. How toolsets control what Hermes can do.
+4. How memory helps Hermes remember stable preferences and project context.
+5. How skills turn repeatable procedures into reusable workflows.
+6. How cron jobs turn one-off tasks into scheduled automation.
+7. How to decide when a task needs human approval, sandboxing, or a narrower toolset.
 
-## Add your files
+## Core Teaching Rule
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+Use this rule throughout the day:
 
+```text
+Get one clean chat working first.
+Then add tools.
+Then add memory.
+Then add skills.
+Then add cron or gateway automation.
 ```
-cd existing_repo
-git remote add origin https://seagit.okla.seagate.com/mesgit/restricted/gfit-genai/skills/genai-show-and-tell/introduction-to-hermes-agent.git
-git branch -M main
-git push -uf origin main
+
+If the basic chat is not stable, do not add gateway, cron, or more tool access yet.
+
+### Advanced note: `/goal` + `/yolo` safety envelope
+
+Treat `/yolo` as a **temporary escalation** that should only be combined with `/goal` when the goal is already scoped, verifiable, and reversible.
+
+Minimum guardrails before combining them:
+
+- **Scope**: list allowed paths/file types and explicitly forbid everything else.
+- **Verification**: include at least one concrete check command (for example, `git diff --name-only`).
+- **Stop condition**: define exactly what “done” means so the agent can stop without drifting.
+- **Rollback plan**: state how to undo changes (for example, `git restore --staged --worktree -- <path>`).
+
+**Advanced note (more strict):** if you need `/yolo`, also pin a *proof-of-scope* check like `git diff --name-only -- Day-02-Hermes/` and instruct the agent to abort if any path appears outside the allowlist.
+
+## Demo Scenario
+
+Build a small Hermes workflow for a recurring technical research brief.
+
+The workflow should:
+
+- use a specific, verifiable prompt
+- remember stable user preferences
+- use or create a reusable skill
+- schedule the task with cron
+- save or deliver output through a safe target
+- include a manual test before trusting the schedule
+
+The content examples are intentionally language-neutral. Learners can later adapt the output language, audience, and format to their own needs.
+
+## Folder Structure
+
+```text
+day-02/
+  README.md
+  prompts/
+    hermes-practical-workflow-prompts.md
+    hermes-advanced-goal-yolo-prompts.md
+  materials/
+    hermes-workflow-demo-board.md
+    hermes-goal-yolo-demo-board.md
+  references/
+    hermes-command-cheatsheet.md
+    hermes-goal-yolo-cheatsheet.md
 ```
 
-## Integrate with your tools
+## How to Use This Day
 
-- [ ] [Set up project integrations](https://seagit.okla.seagate.com/mesgit/restricted/gfit-genai/skills/genai-show-and-tell/introduction-to-hermes-agent/-/settings/integrations)
+Start with the prompt playbook:
 
-## Collaborate with your team
+```text
+day-02/prompts/hermes-practical-workflow-prompts.md
+```
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+Use the demo board to track progress:
 
-## Test and Deploy
+```text
+day-02/materials/hermes-workflow-demo-board.md
+```
 
-Use the built-in continuous integration in GitLab.
+Keep the command cheatsheet nearby:
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+```text
+day-02/references/hermes-command-cheatsheet.md
+```
 
-***
+After learners complete the base workflow, use the advanced goal and YOLO track:
 
-# Editing this README
+```text
+day-02/prompts/hermes-advanced-goal-yolo-prompts.md
+day-02/materials/hermes-goal-yolo-demo-board.md
+day-02/references/hermes-goal-yolo-cheatsheet.md
+```
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+## Main Workflow
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+The classroom workflow moves from simple to advanced:
 
-## Name
-Choose a self-explaining name for your project.
+```text
+Setup check
+-> First useful chat
+-> Tool inspection
+-> Memory
+-> Skills
+-> Cron
+-> Safety review
+-> Capstone workflow
+```
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+## Useful Commands
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+```bash
+hermes
+hermes --tui
+hermes --continue
+hermes doctor
+hermes model
+hermes tools
+hermes skills browse
+hermes skills search research
+hermes cron list
+hermes gateway status
+/goal status
+/goal pause
+/goal resume
+/goal clear
+/yolo
+hermes --yolo
+```
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+## What This Demonstrates
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+Day 2 demonstrates that Hermes is most useful when learners treat it as a workflow system:
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+- prompts define the immediate task
+- tools define available actions
+- memory defines durable context
+- skills define reusable procedures
+- cron defines recurring execution
+- `/goal` defines a persistent objective across turns
+- `/yolo` changes the approval boundary for command execution
+- review gates define trust boundaries
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+## Day 1 vs Day 2
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+Day 1 focuses on:
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+```text
+One agent + skills + SDLC workflow
+```
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+Day 2 focuses on:
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+```text
+Hermes as a persistent workflow agent with memory, skills, and automation
+```
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+## Minimum Acceptance Criteria
 
-## License
-For open source projects, say how it is licensed.
+The Day 2 smoke test passes when:
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+- Hermes can complete a normal chat.
+- Learners can explain which tools are enabled.
+- Learners can write one useful memory item.
+- Learners can explain when memory should not be used.
+- Learners can run or create one simple skill.
+- Learners can create, list, and manually run a cron job.
+- Learners can identify at least three safety controls.
+- The final workflow has a clear manual verification step.
+
+The advanced Day 2 track passes when:
+
+- Learners can write a scoped `/goal` with verification and a stop condition.
+- Learners can pause, resume, inspect, and clear a goal.
+- Learners can explain what `/yolo` bypasses.
+- Learners can identify when `/yolo` is forbidden.
+- Learners can describe the safety envelope required before combining `/goal` and `/yolo`.
+
+## References
+
+- https://hermes-agent.nousresearch.com/docs/getting-started/quickstart/
+- https://hermes-agent.nousresearch.com/docs/getting-started/installation/
+- https://hermes-agent.nousresearch.com/docs/user-guide/features/tools/
+- https://hermes-agent.nousresearch.com/docs/reference/toolsets-reference/
+- https://hermes-agent.nousresearch.com/docs/user-guide/features/memory/
+- https://hermes-agent.nousresearch.com/docs/user-guide/features/skills/
+- https://hermes-agent.nousresearch.com/docs/user-guide/features/cron/
+- https://hermes-agent.nousresearch.com/docs/user-guide/features/goals/
+- https://hermes-agent.nousresearch.com/docs/reference/slash-commands/
+- https://hermes-agent.nousresearch.com/docs/user-guide/security/
