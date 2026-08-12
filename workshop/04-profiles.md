@@ -1,4 +1,4 @@
-# 4. Profiles in Dashboard
+# 4. Profiles
 
 ## Goal
 
@@ -6,13 +6,17 @@ Create two profiles and switch between them.
 
 A profile has its own model, skills, memory, and sessions.
 
-## Open Dashboard
+## Open Profiles
+
+You can manage profiles in Desktop, Dashboard, or CLI.
+
+In Desktop or Dashboard, open **Profiles**.
+
+In CLI, run:
 
 ```powershell
-hermes dashboard
+hermes profile list
 ```
-
-Open **Profiles**.
 
 ## Create a profile
 

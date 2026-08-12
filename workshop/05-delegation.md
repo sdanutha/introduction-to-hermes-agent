@@ -1,4 +1,4 @@
-# 5. Delegation Demo
+# 5. Delegation
 
 ## Goal
 

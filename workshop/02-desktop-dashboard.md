@@ -1,4 +1,4 @@
-# 2. Desktop and Dashboard Demo
+# 2. Desktop and Dashboard
 
 ## Goal
 
@@ -11,7 +11,7 @@ Ask Hermes
 -> Check the session in Dashboard
 ```
 
-## Demo steps
+## Steps
 
 | Step | Do this | Good result |
 | --- | --- | --- |

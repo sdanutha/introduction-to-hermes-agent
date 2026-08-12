@@ -1,4 +1,4 @@
-# 6. Kanban Demo
+# 6. Kanban
 
 ## Goal
 
