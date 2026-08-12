@@ -1,17 +1,18 @@
-# 2. Desktop and Dashboard
+# 2. Desktop
+
+## Description
+
+Desktop is the main visual app for chatting, reading files, and working on projects. It is good for daily work.
 
 ## Goal
 
-Show one simple workflow from Desktop to Dashboard.
+Use Desktop to read a project and create a result.
 
-```text
-Ask Hermes
--> Read a project
--> Create a result
--> Check the session in Dashboard
-```
+## Setup
 
-## Steps
+Open a project in Desktop.
+
+## Try it
 
 | Step | Do this | Good result |
 | --- | --- | --- |
@@ -19,10 +20,8 @@ Ask Hermes
 | 2 | Ask Hermes to explain the project | The answer has clear points. |
 | 3 | Ask for a short report | Hermes creates a useful result. |
 | 4 | Open File Browser or Artifacts | The result is easy to find. |
-| 5 | Run `hermes dashboard` | The Dashboard opens. |
-| 6 | Open Sessions | The Desktop chat is visible. |
 
-## Short prompt
+### Short prompt
 
 ```text
 Write a short summary of this project.
@@ -30,8 +29,19 @@ Use five bullet points.
 Save it as project-summary.md.
 ```
 
+## Check the result
+
+- The learner can find the result in File Browser or Artifacts.
+
+## Safety
+
+- Review files before sharing them.
+
 ## Finish check
 
 - The learner can open a project.
 - The learner can ask for a result.
-- The learner can find the session in Dashboard.
+
+## Official guide
+
+- https://hermes-agent.nousresearch.com/docs/user-guide/desktop

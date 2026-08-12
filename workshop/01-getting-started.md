@@ -1,10 +1,16 @@
 # 1. Getting Started with Hermes
 
+## Description
+
+This section explains how to install Hermes and start a basic chat. It is good for new users.
+
 ## Goal
 
 Install Hermes, complete basic setup, and start your first chat.
 
-## 1. Install Hermes
+## Setup
+
+### Install Hermes
 
 Install Hermes Desktop for Windows:
 
@@ -16,7 +22,7 @@ For command line only, run this in PowerShell:
 iex (irm https://hermes-agent.nousresearch.com/install.ps1)
 ```
 
-## 2. Set up Hermes
+### Set up Hermes
 
 Fast setup with Nous Portal:
 
@@ -30,15 +36,9 @@ Or use the setup wizard:
 hermes setup
 ```
 
-## 3. Check your setup
+## Try it
 
-```powershell
-hermes doctor
-hermes model
-hermes tools
-```
-
-## 4. Start your first chat
+### Start your first chat
 
 ```powershell
 hermes
@@ -48,6 +48,7 @@ You can also try:
 
 ```powershell
 hermes --tui
+hermes --cli
 ```
 
 ### Prompt 1: Interview me
@@ -76,43 +77,28 @@ When we finish:
 5. Do not save passwords, API keys, or secrets.
 ```
 
-## 5. Try one simple chat
+### Try one simple chat
 
 ```text
 Tell me what you can do.
 ```
 
-## Basic commands
+## Check the result
+
+### Basic commands
 
 | Command | Use it to |
 | --- | --- |
-| `hermes` | Start a chat. |
 | `hermes --help` | See all commands. |
-| `hermes --tui` | Start the modern text interface. |
-| `hermes --cli` | Start the classic CLI. |
-| `hermes setup` | Change setup. |
-| `hermes model` | Choose a model. |
-| `hermes doctor` | Find setup problems. |
-| `hermes tools` | Check or change tools. |
-| `hermes --continue` | Continue the last session. |
-| `hermes sessions list` | See past sessions. |
-| `hermes --resume <session_id>` | Resume a selected session. |
-| `hermes desktop` | Open Desktop. |
-| `hermes dashboard` | Open Dashboard. |
-
-## If something fails
-
-Run these commands:
-
-```powershell
-hermes setup
-hermes model
-hermes doctor
-```
-
-More commands:
-
-- https://hermes-agent.nousresearch.com/docs/reference/cli-commands
+| `hermes` | Start a chat. |
+| `hermes --tui` | Launch the modern TUI. |
+| `hermes --cli` | Force the classic REPL. |
+| `hermes setup` | Run setup wizard. |
+| `hermes model` | Select default model. |
+| `hermes sessions list` | List past sessions. |
+| `hermes --resume <session_id>` | Resume a specific session by ID. |
+| `hermes desktop` | Start the Desktop App. |
+| `hermes dashboard` | Start the Dashboard Web. |
 
 ## Finish check
 
@@ -120,3 +106,13 @@ More commands:
 - Setup is complete.
 - A model answers.
 - The learner knows the basic commands.
+
+## Safety
+
+- Do not save passwords, API keys, or secrets.
+
+## Official guide
+
+- https://hermes-agent.nousresearch.com/docs/getting-started/installation
+- https://hermes-agent.nousresearch.com/docs/getting-started/quickstart
+- https://hermes-agent.nousresearch.com/docs/reference/cli-commands

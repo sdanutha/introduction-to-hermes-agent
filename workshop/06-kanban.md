@@ -1,12 +1,18 @@
 # 6. Kanban
 
+## Description
+
+Kanban is a task board for longer work. It is good for work with steps, roles, and review.
+
 ## Goal
 
 Show how Hermes can manage longer work.
 
 Use this as an advanced topic.
 
-## Simple idea
+## Setup
+
+### Simple idea
 
 ```text
 Research -> Write -> Review -> Done
@@ -14,20 +20,22 @@ Research -> Write -> Review -> Done
 
 Kanban uses a task board. The gateway dispatcher starts assigned work.
 
-## Start the board
+## Try it
+
+### Start the board
 
 ```powershell
 hermes kanban init
 hermes gateway start
 ```
 
-## Create a task
+### Create a task
 
 ```powershell
-hermes kanban create "Research Hermes Desktop" --assignee training-researcher
+hermes kanban create "Research Hermes Desktop" --assignee researcher-agent
 ```
 
-## Watch the work
+### Watch the work
 
 ```powershell
 hermes kanban watch
@@ -37,13 +45,20 @@ hermes kanban show <task_id>
 
 You can also use Dashboard to check profiles, sessions, and system status.
 
-## Review
+## Check the result
+
+### Review
 
 ```powershell
 hermes kanban block <task_id> "Need more information."
 hermes kanban unblock <task_id>
 hermes kanban archive <task_id>
 ```
+
+## Safety
+
+- Review task results before accepting them.
+- Archive practice tasks after the workshop.
 
 ## Finish check
 
@@ -52,6 +67,6 @@ hermes kanban archive <task_id>
 - The learner can watch the task.
 - The learner can block or archive a practice task.
 
-Official guide:
+## Official guide
 
 - https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban/
