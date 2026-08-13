@@ -20,6 +20,13 @@ Research -> Write -> Review -> Done
 
 Kanban uses a task board. The gateway dispatcher starts assigned work.
 
+### Initialize
+
+```powershell
+hermes kanban init
+hermes gateway start
+```
+
 ## Try it
 
 ### Create a task
