@@ -36,6 +36,37 @@ Or use the setup wizard:
 hermes setup
 ```
 
+### Install with Docker
+
+Use Docker when you want Hermes to run in a container.
+
+You need Docker Desktop or Docker Engine.
+
+Pull the official image:
+
+```powershell
+docker pull nousresearch/hermes-agent:latest
+```
+
+Create the Hermes data folder and run setup:
+
+```powershell
+mkdir $HOME\.hermes
+docker run -it --rm `
+  -v $HOME\.hermes:/opt/data `
+  nousresearch/hermes-agent setup
+```
+
+Start a chat with the same data:
+
+```powershell
+docker run -it --rm `
+  -v $HOME\.hermes:/opt/data `
+  nousresearch/hermes-agent
+```
+
+The `~/.hermes` folder keeps your settings, sessions, Memory, Skills, and Cron jobs.
+
 ## Try it
 
 ### Start your first chat
@@ -116,3 +147,4 @@ Tell me what you can do.
 - https://hermes-agent.nousresearch.com/docs/getting-started/installation
 - https://hermes-agent.nousresearch.com/docs/getting-started/quickstart
 - https://hermes-agent.nousresearch.com/docs/reference/cli-commands
+- https://hermes-agent.nousresearch.com/docs/user-guide/docker/
